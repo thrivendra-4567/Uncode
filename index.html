@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNCode | Learn • Code • Build • Grow</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="app-shell">
+
+    <aside class="sidebar">
+        <a href="#" class="logo" data-page="home">
+            <i class="fa-solid fa-code"></i>
+            <span>Uncode</span>
+        </a>
+
+        <nav class="sidebar-menu">
+            <button class="nav-link active" data-page="home"><i class="fa-solid fa-house"></i> Home</button>
+            <button class="nav-link" data-page="courses"><i class="fa-solid fa-book-open"></i> My Courses</button>
+            <button class="nav-link" data-page="projects"><i class="fa-solid fa-code"></i> Projects</button>
+            <button class="nav-link" data-page="workshops"><i class="fa-regular fa-calendar-days"></i> Workshops</button>
+            <button class="nav-link" data-page="practice"><i class="fa-solid fa-bullseye"></i> Practice</button>
+            <button class="nav-link" data-page="community"><i class="fa-solid fa-users"></i> Community</button>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="sidebar-note">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>Keep Learning!</h3>
+                <p>Small steps every day lead to big achievements.</p>
+            </div>
+            <p class="sidebar-footer">Learn • Code • Build • Grow</p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" id="globalSearch" placeholder="Search courses, projects, workshops...">
+                <span class="shortcut">Ctrl + K</span>
+            </div>
+
+            <div class="top-actions">
+                <button class="login-open-btn" id="loginOpenBtn"><i class="fa-solid fa-right-to-bracket"></i> <span>Log in</span></button>
+                <button class="notification" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+                <button class="profile-icon" aria-label="Profile">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- HOME PAGE -->
+        <section class="page-view active" id="homePage">
+
+            <section class="hero-section">
+                <div class="hero-content">
+                    <p class="welcome-text">Welcome to UNCode 👋</p>
+                    <h1>Continue Your <span>Learning Journey</span></h1>
+                    <p class="hero-description">
+                        Learn new skills, build real projects, and grow your career in technology.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <button class="primary-button" data-go="courses">Explore Courses <i class="fa-solid fa-arrow-right"></i></button>
+                        <button class="secondary-button" data-go="projects"><i class="fa-solid fa-grip"></i> Explore Projects</button>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="visual-circle circle-one"></div>
+                    <div class="visual-circle circle-two"></div>
+                    <div class="laptop">
+                        <div class="laptop-screen">
+                            <div class="screen-header"><span></span><span></span><span></span></div>
+                            <div class="code-editor">
+                                <div class="code-sidebar"><i class="fa-solid fa-folder"></i><i class="fa-solid fa-file-code"></i></div>
+                                <div class="code-lines">
+                                    <div class="code-line purple"></div>
+                                    <div class="code-line blue"></div>
+                                    <div class="code-line yellow"></div>
+                                    <div class="code-line green"></div>
+                                    <div class="code-line purple short"></div>
+                                    <div class="code-line blue"></div>
+                                    <div class="code-line yellow medium"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="laptop-base"></div>
+                    </div>
+                    <div class="floating-code"><i class="fa-solid fa-code"></i></div>
+                </div>
+            </section>
+
+            <section class="stats-grid">
+                <div class="stat-card"><div class="stat-icon"><i class="fa-solid fa-book-open"></i></div><div><h3>My Courses</h3><p>Explore learning paths</p></div></div>
+                <div class="stat-card"><div class="stat-icon"><i class="fa-solid fa-chart-simple"></i></div><div><h3>Progress</h3><p>Start your journey</p></div></div>
+                <div class="stat-card"><div class="stat-icon"><i class="fa-solid fa-layer-group"></i></div><div><h3>Projects</h3><p>Build something new</p></div></div>
+                <div class="stat-card"><div class="stat-icon gold"><i class="fa-solid fa-trophy"></i></div><div><h3>Achievements</h3><p>Earn as you learn</p></div></div>
+            </section>
+
+            <section class="panel">
+                <div class="section-heading">
+                    <h2>Explore UNCode</h2>
+                </div>
+                <div class="quick-grid">
+                    <button class="quick-card" data-go="courses"><i class="fa-solid fa-book-open"></i><h3>My Courses</h3><p>Explore programming courses</p></button>
+                    <button class="quick-card" data-go="projects"><i class="fa-solid fa-laptop-code"></i><h3>Projects</h3><p>Build practical applications</p></button>
+                    <button class="quick-card" data-go="workshops"><i class="fa-solid fa-calendar-days"></i><h3>Workshops</h3><p>Join guided sessions</p></button>
+                    <button class="quick-card" data-go="practice"><i class="fa-solid fa-bullseye"></i><h3>Practice</h3><p>Improve your coding skills</p></button>
+                </div>
+            </section>
+        </section>
+
+        <!-- MY COURSES PAGE -->
+        <section class="page-view" id="coursesPage">
+            <section class="page-heading">
+                <span class="eyebrow">YOUR LEARNING SPACE</span>
+                <h1>My Courses</h1>
+                <p>Pick up where you left off and keep learning.</p>
+            </section>
+
+            <div class="filter-row">
+                <button class="filter active" data-filter="all">All Courses</button>
+                <button class="filter" data-filter="progress">In Progress</button>
+                <button class="filter" data-filter="completed">Completed</button>
+                <button class="filter" data-filter="not-started">Not Started</button>
+            </div>
+
+            <div class="courses-grid">
+                <article class="course-card" data-course="html" data-status="not-started">
+                    <div class="course-art html-art"><i class="fa-brands fa-html5"></i></div>
+                    <div class="course-body">
+                        <span class="eyebrow">WEB DEVELOPMENT</span>
+                        <h2>HTML & CSS Foundations</h2>
+                        <p>Learn how to structure and style modern websites.</p>
+                        <div class="course-meta"><span>24 Lessons</span><span>Beginner</span></div>
+                        <button class="continue-button">Start Course <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </article>
+
+                <article class="course-card" data-course="javascript" data-status="not-started">
+                    <div class="course-art js-art"><i class="fa-brands fa-js"></i></div>
+                    <div class="course-body">
+                        <span class="eyebrow">WEB DEVELOPMENT</span>
+                        <h2>JavaScript Essentials</h2>
+                        <p>Learn programming logic and interactive web features.</p>
+                        <div class="course-meta"><span>32 Lessons</span><span>Beginner</span></div>
+                        <button class="continue-button">Start Course <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </article>
+
+                <article class="course-card" data-course="python" data-status="not-started">
+                    <div class="course-art python-art"><i class="fa-brands fa-python"></i></div>
+                    <div class="course-body">
+                        <span class="eyebrow">PROGRAMMING</span>
+                        <h2>Python Core</h2>
+                        <p>Understand Python basics, functions and data structures.</p>
+                        <div class="course-meta"><span>28 Lessons</span><span>Beginner</span></div>
+                        <button class="continue-button">Start Course <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </article>
+
+                <article class="course-card" data-course="java" data-status="not-started">
+                    <div class="course-art java-art"><i class="fa-brands fa-java"></i></div>
+                    <div class="course-body">
+                        <span class="eyebrow">PROGRAMMING</span>
+                        <h2>Java Fundamentals</h2>
+                        <p>Explore object-oriented programming with Java.</p>
+                        <div class="course-meta"><span>30 Lessons</span><span>Beginner</span></div>
+                        <button class="continue-button">Start Course <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROJECTS PAGE -->
+        <section class="page-view" id="projectsPage">
+            <section class="project-hero">
+                <div class="hero-content">
+                    <span class="eyebrow"><i class="fa-solid fa-wand-magic-sparkles"></i> CREATE SOMETHING AMAZING</span>
+                    <h1>Bring Your Ideas<br><span>To Life.</span></h1>
+                    <p>Turn your coding knowledge into real-world projects. Explore ideas, build applications and showcase your creativity.</p>
+                    <div class="hero-buttons">
+                        <button class="primary-button" data-go="projects">Explore Projects <i class="fa-solid fa-arrow-right"></i></button>
+                        <button class="secondary-button" data-go="courses">Explore Courses</button>
+                    </div>
+                </div>
+                <div class="project-visual">
+                    <div class="project-orbit"></div>
+                    <div class="project-window">
+                        <div class="screen-header"><span></span><span></span><span></span></div>
+                        <i class="fa-solid fa-code"></i>
+                        <p>const project = "My Idea";</p>
+                        <p>startBuilding();</p>
+                    </div>
+                    <div class="project-float">&lt;/&gt;</div>
+                </div>
+            </section>
+
+            <section class="stats-grid">
+                <div class="stat-card"><div class="stat-icon"><i class="fa-solid fa-folder-open"></i></div><div><h3>0</h3><p>Total Projects</p></div></div>
+                <div class="stat-card"><div class="stat-icon"><i class="fa-solid fa-code"></i></div><div><h3>0</h3><p>In Progress</p></div></div>
+                <div class="stat-card"><div class="stat-icon"><i class="fa-solid fa-circle-check"></i></div><div><h3>0</h3><p>Completed</p></div></div>
+                <div class="stat-card"><div class="stat-icon gold"><i class="fa-solid fa-lightbulb"></i></div><div><h3>0</h3><p>Ideas Created</p></div></div>
+            </section>
+
+            <div class="section-heading">
+                <div><span class="eyebrow">YOUR CREATIVE SPACE</span><h2>Explore Projects</h2><p>Choose a project and start building your skills.</p></div>
+            </div>
+
+            <div class="filter-row project-filters">
+                <button class="category active" data-project-filter="all">All Projects</button>
+                <button class="category" data-project-filter="web">Web Development</button>
+                <button class="category" data-project-filter="python">Python</button>
+                <button class="category" data-project-filter="java">Java</button>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card" data-category="web">
+                    <div class="project-art portfolio"><span>01</span><i class="fa-solid fa-laptop-code"></i></div>
+                    <div class="project-info"><span class="eyebrow">HTML • CSS • JAVASCRIPT</span><h3>Personal Portfolio Website</h3><p>Design a personal website to showcase skills and achievements.</p><div class="project-details"><span>4–6 Hours</span><span>Beginner</span></div><div class="progress-info"><span>Progress</span><strong>0%</strong></div><div class="progress-bar"><span></span></div><button class="start-button">Start Project <i class="fa-solid fa-arrow-right"></i></button></div>
+                </article>
+
+                <article class="project-card" data-category="web">
+                    <div class="project-art todo"><span>02</span><i class="fa-solid fa-list-check"></i></div>
+                    <div class="project-info"><span class="eyebrow">HTML • CSS • JAVASCRIPT</span><h3>Smart To-Do Application</h3><p>Create a task manager to organize daily activities.</p><div class="project-details"><span>5–7 Hours</span><span>Beginner</span></div><div class="progress-info"><span>Progress</span><strong>0%</strong></div><div class="progress-bar"><span></span></div><button class="start-button">Start Project <i class="fa-solid fa-arrow-right"></i></button></div>
+                </article>
+
+                <article class="project-card" data-category="python">
+                    <div class="project-art weather"><span>03</span><i class="fa-solid fa-cloud-sun"></i></div>
+                    <div class="project-info"><span class="eyebrow">PYTHON</span><h3>Weather Application</h3><p>Build a simple application that displays weather information.</p><div class="project-details"><span>4–6 Hours</span><span>Beginner</span></div><div class="progress-info"><span>Progress</span><strong>0%</strong></div><div class="progress-bar"><span></span></div><button class="start-button">Start Project <i class="fa-solid fa-arrow-right"></i></button></div>
+                </article>
+
+                <article class="project-card" data-category="java">
+                    <div class="project-art manager"><span>04</span><i class="fa-solid fa-database"></i></div>
+                    <div class="project-info"><span class="eyebrow">JAVA</span><h3>Student Management System</h3><p>Practice Java by creating a simple student records application.</p><div class="project-details"><span>6–8 Hours</span><span>Beginner</span></div><div class="progress-info"><span>Progress</span><strong>0%</strong></div><div class="progress-bar"><span></span></div><button class="start-button">Start Project <i class="fa-solid fa-arrow-right"></i></button></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- WORKSHOPS PAGE -->
+        <section class="page-view" id="workshopsPage">
+            <section class="workshop-hero">
+                <div class="hero-content">
+                    <span class="eyebrow"><i class="fa-solid fa-wand-magic-sparkles"></i> LEARN BEYOND THE CLASSROOM</span>
+                    <h1>Learn Together.<br><span>Build Together.</span></h1>
+                    <p>Join interactive coding workshops, explore new technologies and learn practical skills from guided sessions.</p>
+                    <div class="hero-buttons">
+                        <button class="primary-button" data-scroll="upcoming">Explore Workshops <i class="fa-solid fa-arrow-right"></i></button>
+                        <button class="secondary-button" data-scroll="how-it-works">How It Works</button>
+                    </div>
+                </div>
+                <div class="workshop-visual">
+                    <div class="workshop-orbit"></div>
+                    <div class="workshop-screen">
+                        <div class="screen-header"><span></span><span></span><span></span></div>
+                        <span class="live-label">LIVE WORKSHOP</span>
+                        <p><b>function</b> learn() {</p>
+                        <p>&nbsp; buildProjects();</p>
+                        <p>&nbsp; improveSkills();</p>
+                        <p>}</p>
+                    </div>
+                    <i class="fa-solid fa-graduation-cap workshop-float"></i>
+                </div>
+            </section>
+
+            <section class="stats-grid">
+                <div class="stat-card"><div class="stat-icon"><i class="fa-solid fa-calendar-check"></i></div><div><h3>0</h3><p>Registered Workshops</p></div></div>
+                <div class="stat-card"><div class="stat-icon"><i class="fa-solid fa-video"></i></div><div><h3>0</h3><p>Attended Sessions</p></div></div>
+                <div class="stat-card"><div class="stat-icon"><i class="fa-solid fa-certificate"></i></div><div><h3>0</h3><p>Certificates Earned</p></div></div>
+                <div class="stat-card"><div class="stat-icon gold"><i class="fa-solid fa-clock"></i></div><div><h3>0</h3><p>Learning Hours</p></div></div>
+            </section>
+
+            <section id="upcoming">
+                <div class="section-heading"><div><span class="eyebrow">LEARN SOMETHING NEW</span><h2>Upcoming Workshops</h2><p>Discover practical sessions and start learning.</p></div></div>
+
+                <div class="filter-row workshop-filters">
+                    <button class="category active" data-workshop-filter="all">All Workshops</button>
+                    <button class="category" data-workshop-filter="html">HTML & CSS</button>
+                    <button class="category" data-workshop-filter="javascript">JavaScript</button>
+                    <button class="category" data-workshop-filter="python">Python</button>
+                    <button class="category" data-workshop-filter="java">Java</button>
+                </div>
+
+                <div class="workshop-grid">
+                    <article class="workshop-card" data-workshop="html">
+                        <div class="workshop-art html-art"><span>UPCOMING</span><i class="fa-brands fa-html5"></i></div>
+                        <div class="workshop-info"><span class="eyebrow">HTML & CSS</span><h3>Build Your First Web Page</h3><p>Learn HTML and CSS by creating your own responsive website.</p><div class="workshop-details"><span><i class="fa-regular fa-calendar"></i> Date to be announced</span><span><i class="fa-regular fa-clock"></i> 2 Hours</span></div><button class="register-btn">Register Interest <i class="fa-solid fa-arrow-right"></i></button></div>
+                    </article>
+
+                    <article class="workshop-card" data-workshop="javascript">
+                        <div class="workshop-art js-art"><span>UPCOMING</span><i class="fa-brands fa-js"></i></div>
+                        <div class="workshop-info"><span class="eyebrow">JAVASCRIPT</span><h3>JavaScript Interactive Web</h3><p>Discover JavaScript fundamentals and make websites interactive.</p><div class="workshop-details"><span><i class="fa-regular fa-calendar"></i> Date to be announced</span><span><i class="fa-regular fa-clock"></i> 2 Hours</span></div><button class="register-btn">Register Interest <i class="fa-solid fa-arrow-right"></i></button></div>
+                    </article>
+
+                    <article class="workshop-card" data-workshop="python">
+                        <div class="workshop-art python-art"><span>UPCOMING</span><i class="fa-brands fa-python"></i></div>
+                        <div class="workshop-info"><span class="eyebrow">PYTHON</span><h3>Python Programming Basics</h3><p>Understand variables, loops, functions and Python basics.</p><div class="workshop-details"><span><i class="fa-regular fa-calendar"></i> Date to be announced</span><span><i class="fa-regular fa-clock"></i> 2 Hours</span></div><button class="register-btn">Register Interest <i class="fa-solid fa-arrow-right"></i></button></div>
+                    </article>
+
+                    <article class="workshop-card" data-workshop="java">
+                        <div class="workshop-art java-art"><span>UPCOMING</span><i class="fa-brands fa-java"></i></div>
+                        <div class="workshop-info"><span class="eyebrow">JAVA</span><h3>Object-Oriented Programming</h3><p>Understand classes, objects and Java programming fundamentals.</p><div class="workshop-details"><span><i class="fa-regular fa-calendar"></i> Date to be announced</span><span><i class="fa-regular fa-clock"></i> 2 Hours</span></div><button class="register-btn">Register Interest <i class="fa-solid fa-arrow-right"></i></button></div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="how-section" id="how-it-works">
+                <div class="section-heading"><div><span class="eyebrow">YOUR LEARNING JOURNEY</span><h2>How Workshops Work</h2><p>Three simple steps to begin your experience.</p></div></div>
+                <div class="quick-grid">
+                    <div class="quick-card"><i class="fa-solid fa-magnifying-glass"></i><h3>Explore</h3><p>Find a workshop that matches your interests.</p></div>
+                    <div class="quick-card"><i class="fa-solid fa-calendar-check"></i><h3>Register</h3><p>Choose a session and reserve your place.</p></div>
+                    <div class="quick-card"><i class="fa-solid fa-laptop-code"></i><h3>Start Learning</h3><p>Join the session and build practical skills.</p></div>
+                </div>
+            </section>
+        </section>
+
+        <!-- PRACTICE PAGE -->
+        <section class="page-view" id="practicePage">
+            <section class="page-heading">
+                <span class="eyebrow">IMPROVE YOUR SKILLS</span>
+                <h1>Practice</h1>
+                <p>Sharpen your skills with coding exercises and challenges.</p>
+            </section>
+            <div class="quick-grid">
+                <div class="quick-card"><i class="fa-solid fa-code"></i><h3>Coding Challenges</h3><p>Solve programming problems.</p></div>
+                <div class="quick-card"><i class="fa-solid fa-clipboard-question"></i><h3>Quizzes</h3><p>Test your knowledge.</p></div>
+                <div class="quick-card"><i class="fa-solid fa-terminal"></i><h3>Playground</h3><p>Try code concepts.</p></div>
+            </div>
+        </section>
+
+        <!-- COMMUNITY PAGE -->
+        <section class="page-view" id="communityPage">
+            <section class="page-heading">
+                <span class="eyebrow">LEARN WITH OTHERS</span>
+                <h1>Community</h1>
+                <p>Connect, share ideas and grow with other learners.</p>
+            </section>
+            <div class="community-panel">
+                <i class="fa-solid fa-users"></i>
+                <h2>Welcome to the UNCode Community</h2>
+                <p>Community discussions and member features will be added here.</p>
+            </div>
+        </section>
+
+        <!-- LESSON PAGE -->
+        <section class="page-view" id="lessonPage">
+            <div class="lesson-topline">
+                <button class="back-link" id="backToCourses">← Back to courses</button>
+                <span class="eyebrow">UNCODE LEARNING ROOM</span>
+            </div>
+
+            <div class="lesson-layout">
+                <aside class="lesson-sidebar">
+                    <div class="lesson-course-heading">
+                        <span class="lesson-course-icon" id="lessonIcon">⌘</span>
+                        <div>
+                            <span class="eyebrow">YOUR COURSE</span>
+                            <h2 id="lessonCourseTitle"></h2>
+                        </div>
+                    </div>
+
+                    <div class="lesson-progress-label">
+                        <span>Course progress</span>
+                        <strong id="lessonProgressText">0%</strong>
+                    </div>
+
+                    <div class="lesson-progress-track"><span id="lessonProgressBar"></span></div>
+                    <div id="lessonList" class="lesson-list"></div>
+                </aside>
+
+                <article class="lesson-content">
+                    <div class="lesson-content-meta">
+                        <span id="lessonNumber"></span>
+                        <span id="lessonDuration"></span>
+                    </div>
+
+                    <h1 id="lessonTitle"></h1>
+                    <p class="lesson-intro" id="lessonIntro"></p>
+                    <div class="lesson-reading" id="lessonBody"></div>
+
+                    <div class="lesson-example">
+                        <div class="example-heading">
+                            Example
+                            <button id="copyLessonCode" class="copy-code-btn">Copy</button>
+                        </div>
+                        <pre><code id="lessonCode"></code></pre>
+                    </div>
+
+                    <div class="lesson-footer">
+                        <button class="secondary-button" id="previousLesson">Previous</button>
+                        <button class="primary-button" id="completeLesson">Mark as complete</button>
+                        <button class="secondary-button" id="nextLesson">Next lesson →</button>
+                    </div>
+
+                    <p class="lesson-note">Starter learning model. Sample lessons only; progress is saved in this browser.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- LOGIN PAGE -->
+        <section class="page-view" id="loginPage">
+            <div class="auth-page">
+                <div class="auth-visual">
+                    <div class="auth-brand">⌘ UNCode</div>
+
+                    <div class="auth-visual-copy">
+                        <span>LEARN. CODE. BUILD.</span>
+                        <h1>Your next skill<br>starts here.</h1>
+                        <p>Learn programming step by step, build projects and turn ideas into reality.</p>
+                    </div>
+
+                    <div class="auth-code-card">
+                        while (learning) {<br>
+                        &nbsp; growSkills();<br>
+                        }
+                    </div>
+                </div>
+
+                <div class="auth-form-side">
+                    <button class="back-link auth-back" id="backFromLogin">← Back to website</button>
+
+                    <div class="auth-form-wrap">
+                        <span class="eyebrow">WELCOME TO UNCODE</span>
+                        <h1 id="authHeading">Welcome back!</h1>
+                        <p class="auth-subtitle" id="authSubtitle">Log in to continue learning.</p>
+
+                        <div class="auth-tabs">
+                            <button class="auth-tab active" data-auth-mode="login">Log in</button>
+                            <button class="auth-tab" data-auth-mode="signup">Create account</button>
+                        </div>
+
+                        <form id="authForm">
+                            <label id="nameLabel" class="auth-hidden">Your name</label>
+                            <input id="authName" class="auth-input auth-hidden" placeholder="Your name">
+
+                            <label>Email address</label>
+                            <input id="authEmail" class="auth-input" type="email" placeholder="you@example.com" required>
+
+                            <label>Password</label>
+                            <input id="authPassword" class="auth-input" type="password" placeholder="Demo password (6+ characters)" minlength="6" required>
+
+                            <button class="primary-button auth-submit" id="authSubmit">Log in →</button>
+                            <p id="authMessage" class="auth-message"></p>
+                        </form>
+
+                        <p class="auth-disclaimer">
+                            Demo interface only. No real account is created and no password is stored or sent. Do not enter a real password.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">© 2026 UNCode · Learn • Code • Build • Grow</footer>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
